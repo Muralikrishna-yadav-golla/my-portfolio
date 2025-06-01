@@ -210,9 +210,29 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 4px solid rgba(59, 130, 246, 0.3);
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .about-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .profile-placeholder {
             font-size: 4rem;
             color: white;
-            margin: 0 auto;
+            text-align: center;
         }
 
         .about-text p {
@@ -333,6 +353,33 @@
             max-width: 600px;
             margin: 0 auto;
             text-align: center;
+        }
+
+        .contact-methods {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            color: white;
         }
 
         .contact-form {
@@ -481,7 +528,11 @@
         <div class="container">
             <h2 class="section-title fade-in">About Me</h2>
             <div class="about-content fade-in">
-                <div class="about-image">👨‍💻</div>
+                <div class="about-image">
+                    <!-- Replace 'path-to-your-image.jpg' with your actual image path -->
+                    <img src="profile-pic.jpg" alt="Profile Picture" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="profile-placeholder" style="display: none;">👨‍💻</div>
+                </div>
                 <div class="about-text">
                     <p>I'm a passionate developer with [X] years of experience creating digital solutions that make a difference. My journey started with curiosity about how websites work, and has evolved into a love for crafting exceptional user experiences.</p>
                     <p>When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community. I believe in writing clean, maintainable code and staying up-to-date with the latest industry trends.</p>
@@ -591,6 +642,20 @@
             <h2 class="section-title fade-in">Get In Touch</h2>
             <div class="contact-content fade-in">
                 <p>I'm always interested in new opportunities and collaborations. Whether you have a project in mind or just want to say hello, feel free to reach out!</p>
+                
+                <!-- Quick Contact Methods -->
+                <div class="contact-methods">
+                    <a href="https://wa.me/9704059099?text=Hi%20there!%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." 
+                       class="btn btn-whatsapp" target="_blank">
+                        💬 WhatsApp Me
+                    </a>
+                    <a href="mailto:your.gollamuralikrishnayadav1@gmail.com" class="btn btn-secondary">
+                        📧 Email Me
+                    </a>
+                </div>
+                
+                <p><strong>Or send a detailed message below:</strong></p>
+                
                 <form class="contact-form">
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -619,7 +684,7 @@
                 <a href="#" target="_blank">🐙</a>
                 <a href="#" target="_blank">🐦</a>
             </div>
-            <p>&copy; 2025 Your Name. All rights reserved.</p>
+            <p>&copy; 2025 Muralikrishna yadav. All rights reserved.</p>
         </div>
     </footer>
 
